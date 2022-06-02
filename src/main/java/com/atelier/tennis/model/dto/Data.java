@@ -9,6 +9,12 @@ public record Data(
         int height,
         String birthday,
         List<Title> titles,
-        List<Integer> last
+        List<Integer> last       ,
+        double imc
 ) {
+    public Data (int rank, int points, int weight, int height, String birthday, List<Title> titles, List<Integer> last) {
+        this(rank, points,weight, height, birthday, titles, last, ((double)weight/1000)/(Math.pow((double)height/100, 2)));
+    }
+
+
 }

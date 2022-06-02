@@ -26,7 +26,7 @@ public class PlayerService {
         return new ArrayList<>(List.of(data));
     }
 
-    private final ArrayList<Player> players = loadData();
+    public final ArrayList<Player> players = loadData();
 
     public ArrayList<Player> findAllSortedByRank() {
         ArrayList<Player> sorted = players;

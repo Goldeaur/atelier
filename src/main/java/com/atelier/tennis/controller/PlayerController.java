@@ -1,7 +1,9 @@
 package com.atelier.tennis.controller;
 
 import com.atelier.tennis.model.dto.Player;
+import com.atelier.tennis.model.dto.Statistics;
 import com.atelier.tennis.service.PlayerService;
+import com.atelier.tennis.service.StatisticsService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,10 +17,12 @@ import java.util.List;
 public class PlayerController {
 
     private final PlayerService playerService;
+    private final StatisticsService statisticsService;
 
 
-    public PlayerController(PlayerService playerService) {
+    public PlayerController(PlayerService playerService, StatisticsService statisticsService) {
         this.playerService = playerService;
+        this.statisticsService = statisticsService;
     }
 
     @GetMapping
@@ -30,6 +34,13 @@ public class PlayerController {
     public ResponseEntity<Player> getPlayerById(@PathVariable int id) {
         return this.playerService.findPlayer(id);
     }
+
+    @GetMapping("/statistics")
+    public ResponseEntity<Statistics> getStatistics() {
+        return this.statisticsService.statistics();
+    }
+
+
 
 
 }
