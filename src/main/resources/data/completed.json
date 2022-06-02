@@ -1,0 +1,356 @@
+[
+    {
+      "id": 52,
+      "firstname": "Novak",
+      "lastname": "Djokovic",
+      "shortname": "N.DJO",
+      "sex": "M",
+      "country": {
+        "picture": "https://data.latelier.co/training/tennis_stats/resources/Serbie.png",
+        "code": "SRB"
+      },
+      "picture": "https://data.latelier.co/training/tennis_stats/resources/Djokovic.png",
+      "data": {
+        "rank": 2,
+        "points": 2542,
+        "weight": 80000,
+        "height": 188,
+        "birthday": "1987-05-22",
+        "titles": [
+          {
+            "year": 2022,
+            "victories": 1,
+            "tournaments": [
+              "ATP Masters 1000 Rome (Outdoor/Clay)"
+            ]
+          },
+          {
+            "year": 2021,
+            "victories": 5,
+            "tournaments": [
+              "ATP Masters 1000 Paris (Indoor/Hard)",
+              "Wimbledon (Outdoor/Grass)",
+              "Roland Garros (Outdoor/Clay)",
+              "Belgrade 2 (Outdoor/Clay)",
+              "Australian Open (Outdoor/Hard)"
+            ]
+          },
+          {
+            "year": 2020,
+            "victories": 4,
+            "tournaments": [
+              "ATP Masters 1000 Rome (Outdoor/Clay)",
+              "ATP Masters 1000 Cincinnati (Outdoor/Hard)",
+              "Dubai (Outdoor/Hard)",
+              "Australian Open (Outdoor/Hard)"
+            ]
+          },
+          {
+            "year": 2019,
+            "victories": 5,
+            "tournaments": [
+              "ATP Masters 1000 Paris (Indoor/Hard)",
+              "Tokyo (Outdoor/Hard)",
+              "Wimbledon (Outdoor/Grass)",
+              "ATP Masters 1000 Madrid (Outdoor/Clay)",
+              "Australian Open (Outdoor/Hard)"
+            ]
+          },
+          {
+            "year": 2018,
+            "victories": 1,
+            "tournaments": [
+              "ATP Masters 1000 Shanghai (Outdoor/Hard)",
+              "US Open (Outdoor/Hard)",
+              "ATP Masters 1000 Cincinnati (Outdoor/Hard)",
+              "Wimbledon (Outdoor/Grass)"
+            ]
+          }
+        ],
+        "last": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": 95,
+      "firstname": "Venus",
+      "lastname": "Williams",
+      "shortname": "V.WIL",
+      "sex": "F",
+      "country": {
+        "picture": "https://data.latelier.co/training/tennis_stats/resources/USA.png",
+        "code": "USA"
+      },
+      "picture": "https://data.latelier.co/training/tennis_stats/resources/Venus.webp",
+      "data": {
+        "rank": 52,
+        "points": 1105,
+        "weight": 74000,
+        "height": 185,
+        "birthday": "1980-06-17",
+        "titles": [
+          {
+            "year": 2008,
+            "victories": 1,
+            "tournaments": [
+              "Wimbledon (Outdoor/Grass)"
+            ]
+          },
+          {
+            "year": 2007,
+            "victories": 1,
+            "tournaments": [
+              "Wimbledon (Outdoor/Grass)"
+            ]
+          },
+          {
+            "year": 2005,
+            "victories": 1,
+            "tournaments": [
+              "Wimbledon (Outdoor/Grass)"
+            ]
+          },
+          {
+            "year": 2001,
+            "victories": 2,
+            "tournaments": [
+              "US Open (Outdoor/Hard)",
+              "Wimbledon (Outdoor/Grass)",
+              "ATP Masters 1000 Madrid (Outdoor/Clay)",
+              "Australian Open (Outdoor/Hard)"
+            ]
+          },
+          {
+            "year": 2000,
+            "victories": 2,
+            "tournaments": [
+              "US Open (Outdoor/Hard)",
+              "Wimbledon (Outdoor/Grass)"
+            ]
+          }
+        ],
+        "last": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": 65,
+      "firstname": "Stan",
+      "lastname": "Wawrinka",
+      "shortname": "S.WAW",
+      "sex": "M",
+      "country": {
+        "picture": "https://data.latelier.co/training/tennis_stats/resources/Suisse.png",
+        "code": "SUI"
+      },
+      "picture": "https://data.latelier.co/training/tennis_stats/resources/Wawrinka.png",
+      "data": {
+        "rank": 21,
+        "points": 1784,
+        "weight": 81000,
+        "height": 183,
+        "birthday": "1980-06-17",
+        "titles": [
+          {
+            "year": 2017,
+            "victories": 1,
+            "tournaments": [
+              "Geneva (Outdoor/Clay) "
+            ]
+          },
+          {
+            "year": 2016,
+            "victories": 4,
+            "tournaments": [
+              "US Open (Outdoor/Hard)",
+              "Geneva (Outdoor/Clay)",
+              "Dubai (Outdoor/Hard)",
+              "Chennai (Outdoor/Hard)"
+            ]
+          },
+          {
+            "year": 2015,
+            "victories": 4,
+            "tournaments": [
+              "Tokyo (Outdoor/Hard)",
+              "Roland Garros (Outdoor/Clay)",
+              "Rotterdam (Indoor/Hard)",
+              "Chennai (Outdoor/Hard)"
+            ]
+          },
+          {
+            "year": 2014,
+            "victories": 3,
+            "tournaments": [
+              "ATP Masters 1000 Monte Carlo (Outdoor/Clay)",
+              "Australian Open (Outdoor/Hard)",
+              "Chennai (Outdoor/Hard)"
+            ]
+          },
+          {
+            "year": 2013,
+            "victories": 1,
+            "tournaments": [
+              "Oeiras (Outdoor/Clay)"
+            ]
+          }
+        ],
+        "last": [
+          1,
+          1,
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": 102,
+      "firstname": "Serena",
+      "lastname": "Williams",
+      "shortname": "S.WIL",
+      "sex": "F",
+      "country": {
+        "picture": "https://data.latelier.co/training/tennis_stats/resources/USA.png",
+        "code": "USA"
+      },
+      "picture": "https://data.latelier.co/training/tennis_stats/resources/Serena.png",
+      "data": {
+        "rank": 10,
+        "points": 3521,
+        "weight": 72000,
+        "height": 175,
+        "birthday": "1980-06-17",
+        "titles": [
+          {
+            "year": 2017,
+            "victories": 1,
+            "tournaments": [
+              "Australian Open (Outdoor/Hard)"
+            ]
+          },
+          {
+            "year": 2016,
+            "victories": 1,
+            "tournaments": [
+              "Wimbledon (Outdoor/Grass)"
+            ]
+          },
+          {
+            "year": 2015,
+            "victories": 3,
+            "tournaments": [
+              "Wimbledon (Outdoor/Grass)",
+              "Roland Garros (Outdoor/Clay)",
+              "Australian Open (Outdoor/Hard)"
+            ]
+          },
+          {
+            "year": 2014,
+            "victories": 1,
+            "tournaments": [
+              "US Open (Outdoor/Hard)"
+            ]
+          },
+          {
+            "year": 2013,
+            "victories": 1,
+            "tournaments": [
+              "US Open (Outdoor/Hard)"
+            ]
+          }
+        ],
+        "last": [
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "firstname": "Rafael",
+      "lastname": "Nadal",
+      "shortname": "R.NAD",
+      "sex": "M",
+      "country": {
+        "picture": "https://data.latelier.co/training/tennis_stats/resources/Espagne.png",
+        "code": "ESP"
+      },
+      "picture": "https://data.latelier.co/training/tennis_stats/resources/Nadal.png",
+      "data": {
+        "rank": 1,
+        "points": 1982,
+        "weight": 85000,
+        "height": 185,
+        "birthday": "1986-06-03",
+        "titles": [
+          {
+            "year": 2022,
+            "victories": 3,
+            "tournaments": [
+              "Acapulco (Outdoor/Hard)",
+              "Australian Open (Outdoor/Hard)",
+              "Melbourne (Outdoor/Hard)"
+            ]
+          },
+          {
+            "year": 2021,
+            "victories": 2,
+            "tournaments": [
+              "ATP Masters 1000 Rome (Outdoor/Clay)",
+              "Barcelona (Outdoor/Clay)"
+            ]
+          },
+          {
+            "year": 2020,
+            "victories": 2,
+            "tournaments": [
+              "Roland Garros (Outdoor/Clay)",
+              "Acapulco (Outdoor/Hard)"
+            ]
+          },
+          {
+            "year": 2019,
+            "victories": 4,
+            "tournaments": [
+              "US Open (Outdoor/Hard)",
+              "ATP Masters 1000 Canada (Outdoor/Hard)",
+              "Roland Garros (Outdoor/Clay)",
+              "ATP Masters 1000 Rome (Outdoor/Clay)"
+            ]
+          },
+          {
+            "year": 2018,
+            "victories": 5,
+            "tournaments": [
+              "ATP Masters 1000 Canada (Outdoor/Hard)",
+              "Roland Garros (Outdoor/Clay)",
+              "ATP Masters 1000 Rome (Outdoor/Clay)",
+              "Barcelona (Outdoor/Clay)",
+              "ATP Masters 1000 Monte Carlo (Outdoor/Clay)"
+            ]
+          }
+        ],
+        "last": [
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    }
+]
