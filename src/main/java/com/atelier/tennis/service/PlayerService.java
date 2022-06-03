@@ -17,20 +17,20 @@ public class PlayerService {
     public PlayerService() throws IOException {
     }
 
-    private ArrayList<Player> loadData() throws IOException {
+    private List<Player> loadData() throws IOException {
         final ObjectMapper objectMapper = new ObjectMapper();
         Path path = Path.of("src/main/resources/data/completed.json");
         String json = Files.readString(path);
 
         var data = objectMapper.readValue(json, Player[].class);
-        return new ArrayList<>(List.of(data));
+        return List.of(data);
     }
 
-    public final ArrayList<Player> players = loadData();
+    public final List<Player> players = loadData();
 
     public ArrayList<Player> findAllSortedByRank() {
-        ArrayList<Player> sorted = players;
-        sorted.sort(Comparator.comparingInt((Player player) -> player.data().rank()));
+        ArrayList<Player> sorted = new ArrayList<>(players);
+        sorted.sort(Comparator.comparingInt((Player player) -> player.data().getRank()));
         return sorted;
     }
 

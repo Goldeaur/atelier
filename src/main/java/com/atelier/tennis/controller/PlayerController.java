@@ -17,12 +17,11 @@ import java.util.List;
 public class PlayerController {
 
     private final PlayerService playerService;
-    private final StatisticsService statisticsService;
+
 
 
     public PlayerController(PlayerService playerService, StatisticsService statisticsService) {
         this.playerService = playerService;
-        this.statisticsService = statisticsService;
     }
 
     @GetMapping
@@ -34,13 +33,5 @@ public class PlayerController {
     public ResponseEntity<Player> getPlayerById(@PathVariable int id) {
         return this.playerService.findPlayer(id);
     }
-
-    @GetMapping("/statistics")
-    public ResponseEntity<Statistics> getStatistics() {
-        return this.statisticsService.statistics();
-    }
-
-
-
 
 }

@@ -13,6 +13,7 @@ public record Player(
         String sex,
         Country country,
         String picture,
+        @JsonProperty("data")
         Data data
 ) {
 
