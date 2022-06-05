@@ -1,10 +1,7 @@
 package com.atelier.tennis.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.List;
 
@@ -13,7 +10,9 @@ import java.util.List;
 @Setter
 @ToString
 @NoArgsConstructor
-public final class Data {
+@Builder
+@AllArgsConstructor
+public class Data {
     private int rank;
     private int points;
     private int weight;
@@ -22,21 +21,5 @@ public final class Data {
     private List<Title> titles;
     private List<Integer> last;
     private double bmi;
-
-
-    public Data(int rank, int points, int weight, int height, String birthday, List<Title> titles, List<Integer> last) {
-        this.rank = rank;
-        this.points = points;
-        this.weight = weight;
-        this.height = height;
-        this.birthday = birthday;
-        this.titles = titles;
-        this.last = last;
-        this.bmi = ((double) weight / 1000) / (Math.pow((double) height / 100, 2));
-    }
-
-    public double bmi() {
-        return ((double) weight / 1000) / (Math.pow((double) height / 100, 2));
-    }
 
 }

@@ -31,7 +31,7 @@ public class StatisticsService {
     protected Double averageBmi(List<Player> players) {
         var playersData = players.stream().map(Player::data).toList();
         return DoubleRounder.round(playersData.stream()
-                .mapToDouble(Data::bmi)
+                .mapToDouble(Data::getBmi)
                 .average().getAsDouble(), 2);
     }
 

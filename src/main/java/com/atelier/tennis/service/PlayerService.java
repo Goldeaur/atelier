@@ -2,6 +2,7 @@ package com.atelier.tennis.service;
 
 import com.atelier.tennis.model.dto.Player;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.decimal4j.util.DoubleRounder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,8 @@ import java.util.*;
 @Service
 public class PlayerService {
 
+    public final List<Player> players = loadData();
+
     public PlayerService() throws IOException {
     }
 
@@ -23,10 +26,15 @@ public class PlayerService {
         String json = Files.readString(path);
 
         var data = objectMapper.readValue(json, Player[].class);
-        return List.of(data);
+        List<Player> players =  List.of(data);
+
+        players.forEach(player -> player.data().setBmi(calculateBMI(player)));
+        return players;
     }
 
-    public final List<Player> players = loadData();
+    public double calculateBMI(Player player){
+        return DoubleRounder.round(((double) player.data().getWeight() / 1000) / (Math.pow((double) player.data().getHeight() / 100, 2)), 2);
+    }
 
     public ArrayList<Player> findAllSortedByRank() {
         ArrayList<Player> sorted = new ArrayList<>(players);
