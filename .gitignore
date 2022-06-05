@@ -24,6 +24,14 @@ hs_err_pid*
 .idea/
 .mvn/
 
+#dependendies
+/node_module/
+
+
 target/
+
+/dist
+/tmp
+/out-tsc
 
 *mvnw*
