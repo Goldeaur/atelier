@@ -1,0 +1,55 @@
+.mat-card {
+  display: flex;
+  width: 500px;
+  height: 96px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+.data{
+  display: flex;
+  flex-direction: column;
+  width: 333px;
+}
+
+.mat-card-title {
+  color: #F2753B;
+  font-family: Montserrat;
+  margin-top: 15px;
+}
+
+.mat-card-subTitle {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  opacity: 30%;
+  font-family: Mulish;
+}
+
+.value{
+  display: flex;
+  color: #F2753B;
+  font-family: Montserrat;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.card-image {
+  width: 165px;
+  height: 112px;
+  object-fit: cover;
+  object-position: top;
+  overflow: hidden;
+}
+
+.mat-list {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
+

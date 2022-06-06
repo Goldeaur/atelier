@@ -12,28 +12,38 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$atelier-front-angular-primary: mat.define-palette(mat.$indigo-palette);
-$atelier-front-angular-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$front-end-primary: mat.define-palette(mat.$indigo-palette);
+$front-end-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$atelier-front-angular-warn: mat.define-palette(mat.$red-palette);
+$front-end-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$atelier-front-angular-theme: mat.define-light-theme((
+$front-end-theme: mat.define-light-theme((
   color: (
-    primary: $atelier-front-angular-primary,
-    accent: $atelier-front-angular-accent,
-    warn: $atelier-front-angular-warn,
+    primary: $front-end-primary,
+    accent: $front-end-accent,
+    warn: $front-end-warn,
   )
 ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($atelier-front-angular-theme);
+@include mat.all-component-themes($front-end-theme);
 
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Oxygen"), url(./../resources/Typos/Montserrat/Montserrat-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: local("Oxygen"), url(./../resources/Typos/Mulish/Mulish-Bold.ttf) format("truetype");
+}
