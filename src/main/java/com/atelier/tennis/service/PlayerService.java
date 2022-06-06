@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.*;
 
 @Service
@@ -28,11 +30,28 @@ public class PlayerService {
         var data = objectMapper.readValue(json, Player[].class);
         List<Player> players =  List.of(data);
 
-        players.forEach(player -> player.data().setBmi(calculateBMI(player)));
+        players.forEach(player -> {
+            player.data().setBmi(calculateBMI(player));
+            player.data().setAge(calculateAge(player.data().getBirthday()));
+
+        });
         return players;
     }
 
-    public double calculateBMI(Player player){
+    protected int calculateAge(String birthday) {
+        LocalDate dateOfBirth = LocalDate.parse(birthday);
+        LocalDate now = LocalDate.now();
+        if ((dateOfBirth != null) && (now != null))
+        {
+            return Period.between(dateOfBirth, now).getYears();
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    protected double calculateBMI(Player player){
         return DoubleRounder.round(((double) player.data().getWeight() / 1000) / (Math.pow((double) player.data().getHeight() / 100, 2)), 2);
     }
 

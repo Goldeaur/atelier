@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,10 +20,38 @@ class StatisticsServiceTest {
     StatisticsServiceTest() throws IOException {
     }
 
+    @Test
+    void ageShouldBe1WhenBirthdayIsNowMinus13Month() {
+        LocalDate nowMinus13Months = LocalDate.now().minusMonths(13L);
+        String format = nowMinus13Months.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        Assertions.assertEquals(1, playerService.calculateAge(format));
+    }
+
+    @Test
+    void ageShouldBe1WhenBirthdayIsNowMinus23Month() {
+        LocalDate nowMinus13Months = LocalDate.now().minusMonths(23L);
+        String format = nowMinus13Months.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        Assertions.assertEquals(1, playerService.calculateAge(format));
+    }
+
+    @Test
+    void ageShouldBe1WhenBirthdayIsNowMinus24Month() {
+        LocalDate nowMinus13Months = LocalDate.now().minusMonths(24L);
+        String format = nowMinus13Months.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        Assertions.assertEquals(2, playerService.calculateAge(format));
+    }
+
+    @Test
+    void ageShouldBe1WhenBirthdayIsNowMinus25Month() {
+        LocalDate nowMinus13Months = LocalDate.now().minusMonths(25L);
+        String format = nowMinus13Months.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        Assertions.assertEquals(2, playerService.calculateAge(format));
+    }
+
 
     @Test
     void averageImcShouldReturnRightBmiForPLayer1() {
-        Data data1 = new Data(0, 0, 80000, 188, null, null, null, 0);
+        Data data1 = new Data(0, 0, 80000, 188, null, null, null, 0, 0);
         Player player1 = new Player(0, null, null, null, null, null, null, data1);
         Assertions.assertEquals(22.63, playerService.calculateBMI(player1));
         data1.setBmi(playerService.calculateBMI(player1));
@@ -31,11 +61,11 @@ class StatisticsServiceTest {
 
     @Test
     void averageBmiShouldReturnRightAverageWhen5Players(){
-        Data data1 = new Data(0, 0, 80000, 188, null, null, null, 0);
-        Data data2 = new Data(0, 0, 74000, 185, null, null, null, 0);
-        Data data3 = new Data(0, 0, 81000, 183, null, null, null, 0);
-        Data data4 = new Data(0, 0, 72000, 175, null, null, null,0);
-        Data data5 = new Data(0, 0, 85000, 185, null, null, null,0);
+        Data data1 = new Data(0, 0, 80000, 188, null, null, null, 0,0);
+        Data data2 = new Data(0, 0, 74000, 185, null, null, null, 0,0);
+        Data data3 = new Data(0, 0, 81000, 183, null, null, null, 0,0);
+        Data data4 = new Data(0, 0, 72000, 175, null, null, null,0,0);
+        Data data5 = new Data(0, 0, 85000, 185, null, null, null,0,0);
         Player player1 = new Player(0, null, null, null, null, null, null, data1);
         Player player2 = new Player(0, null, null, null, null, null, null, data2);
         Player player3 = new Player(0, null, null, null, null, null, null, data3);
@@ -53,7 +83,7 @@ class StatisticsServiceTest {
 
     @Test
     void medianAgeShouldBeCorrectWhenOnlyOnePLayer(){
-        Data data1 = new Data(0, 0, 80000, 188, null, null, null, 0);
+        Data data1 = new Data(0, 0, 80000, 188, null, null, null, 0,0);
 
         Player player1 = new Player(0, null, null, null, null, null, null, data1);
 
@@ -64,9 +94,9 @@ class StatisticsServiceTest {
 
     @Test
     void medianAgeShouldBeCorrectWhenThreePLayers(){
-        Data data1 = new Data(0, 0, 80000, 188, null, null, null,0);
-        Data data2 = new Data(0, 0, 74000, 185, null, null, null,0);
-        Data data3 = new Data(0, 0, 81000, 183, null, null, null,0);
+        Data data1 = new Data(0, 0, 80000, 188, null, null, null,0,0);
+        Data data2 = new Data(0, 0, 74000, 185, null, null, null,0,0);
+        Data data3 = new Data(0, 0, 81000, 183, null, null, null,0,0);
 
         Player player1 = new Player(0, null, null, null, null, null, null, data1);
         Player player2 = new Player(0, null, null, null, null, null, null, data2);
@@ -79,10 +109,10 @@ class StatisticsServiceTest {
 
     @Test
     void medianAgeShouldBeCorrectWhenFourPLayers(){
-        Data data1 = new Data(0, 0, 80000, 188, null, null, null,0);
-        Data data2 = new Data(0, 0, 74000, 200, null, null, null,0);
-        Data data3 = new Data(0, 0, 81000, 183, null, null, null,0);
-        Data data4 = new Data(0, 0, 72000, 175, null, null, null,0);
+        Data data1 = new Data(0, 0, 80000, 188, null, null, null,0,0);
+        Data data2 = new Data(0, 0, 74000, 200, null, null, null,0,0);
+        Data data3 = new Data(0, 0, 81000, 183, null, null, null,0,0);
+        Data data4 = new Data(0, 0, 72000, 175, null, null, null,0,0);
         Player player1 = new Player(0, null, null, null, null, null, null, data1);
         Player player2 = new Player(0, null, null, null, null, null, null, data2);
         Player player3 = new Player(0, null, null, null, null, null, null, data3);
@@ -95,11 +125,11 @@ class StatisticsServiceTest {
 
     @Test
     void medianAgeShouldBeCorrectWhenFivePLayers(){
-        Data data1 = new Data(0, 0, 80000, 188, null, null, null,0);
-        Data data2 = new Data(0, 0, 74000, 200, null, null, null,0);
-        Data data3 = new Data(0, 0, 81000, 183, null, null, null,0);
-        Data data4 = new Data(0, 0, 72000, 175, null, null, null,0);
-        Data data5 = new Data(0, 0, 85000, 185, null, null, null,0);
+        Data data1 = new Data(0, 0, 80000, 188, null, null, null,0,0);
+        Data data2 = new Data(0, 0, 74000, 200, null, null, null,0,0);
+        Data data3 = new Data(0, 0, 81000, 183, null, null, null,0,0);
+        Data data4 = new Data(0, 0, 72000, 175, null, null, null,0,0);
+        Data data5 = new Data(0, 0, 85000, 185, null, null, null,0,0);
         Player player1 = new Player(0, null, null, null, null, null, null, data1);
         Player player2 = new Player(0, null, null, null, null, null, null, data2);
         Player player3 = new Player(0, null, null, null, null, null, null, data3);
@@ -113,11 +143,11 @@ class StatisticsServiceTest {
 
     @Test
     void bestCountryShouldBeFRA(){
-        Data data1 = new Data(0, 0, 80000, 188, null, null, Arrays.asList(1,1,1,1,1),0);
-        Data data2 = new Data(0, 0, 74000, 200, null, null, Arrays.asList(1,1,1,1,1),0);
-        Data data3 = new Data(0, 0, 81000, 183, null, null, Arrays.asList(1,1,1,0,0),0);
-        Data data4 = new Data(0, 0, 72000, 175, null, null, Arrays.asList(1,0,1,0,1),0);
-        Data data5 = new Data(0, 0, 85000, 185, null, null, Arrays.asList(0,0,0,0,1),0);
+        Data data1 = new Data(0, 0, 80000, 188, null, null, Arrays.asList(1,1,1,1,1),0,0);
+        Data data2 = new Data(0, 0, 74000, 200, null, null, Arrays.asList(1,1,1,1,1),0,0);
+        Data data3 = new Data(0, 0, 81000, 183, null, null, Arrays.asList(1,1,1,0,0),0,0);
+        Data data4 = new Data(0, 0, 72000, 175, null, null, Arrays.asList(1,0,1,0,1),0,0);
+        Data data5 = new Data(0, 0, 85000, 185, null, null, Arrays.asList(0,0,0,0,1),0,0);
         Country country1 = new Country(null, "FRA");
         Country country2 = new Country(null, "FRA");
         Country country3 = new Country(null, "USA");

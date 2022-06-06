@@ -21,5 +21,6 @@ public class Data {
     private List<Title> titles;
     private List<Integer> last;
     private double bmi;
+    private int age;
 
 }
