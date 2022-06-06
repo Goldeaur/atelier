@@ -40,10 +40,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @font-face {
   font-family: "Montserrat";
-  src: local("Oxygen"), url(./../resources/Typos/Montserrat/Montserrat-Bold.ttf) format("truetype");
+  src: local("Oxygen"), url(./assets/Typos/Montserrat/Montserrat-Bold.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Mulish";
-  src: local("Oxygen"), url(./../resources/Typos/Mulish/Mulish-Bold.ttf) format("truetype");
+  src: local("Oxygen"), url(./assets/Typos/Mulish/Mulish-Bold.ttf) format("truetype");
 }

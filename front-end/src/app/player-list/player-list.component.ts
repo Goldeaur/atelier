@@ -12,6 +12,7 @@ export class PlayerListComponent implements OnInit {
 
   players$!: Observable<Player[]>;
 
+
   constructor(private playerService: PlayerService) { }
 
   ngOnInit(): void {
