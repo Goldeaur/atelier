@@ -6,9 +6,10 @@ export class PlayerData {
   public points: number,
   public weight: number,
   public height: number,
-  public birthday: number,
+  public birthday: string,
   public titles: Title[],
   public last: number[],
-  public bmi: number
+  public bmi: number,
+  public age: number
   ){}
 }

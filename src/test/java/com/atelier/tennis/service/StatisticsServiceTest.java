@@ -148,11 +148,11 @@ class StatisticsServiceTest {
         Data data3 = new Data(0, 0, 81000, 183, null, null, Arrays.asList(1,1,1,0,0),0,0);
         Data data4 = new Data(0, 0, 72000, 175, null, null, Arrays.asList(1,0,1,0,1),0,0);
         Data data5 = new Data(0, 0, 85000, 185, null, null, Arrays.asList(0,0,0,0,1),0,0);
-        Country country1 = new Country(null, "FRA");
-        Country country2 = new Country(null, "FRA");
-        Country country3 = new Country(null, "USA");
-        Country country4 = new Country(null, "USA");
-        Country country5 = new Country(null, "USA");
+        Country country1 = new Country(null, "FRA", null);
+        Country country2 = new Country(null, "FRA", null);
+        Country country3 = new Country(null, "USA", null);
+        Country country4 = new Country(null, "USA", null);
+        Country country5 = new Country(null, "USA", null);
         Player player1 = new Player(0, null, null, null, null, country1, null, data1);
         Player player2 = new Player(0, null, null, null, null, country2, null, data2);
         Player player3 = new Player(0, null, null, null, null, country3, null, data3);

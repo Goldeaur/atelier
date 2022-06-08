@@ -1,21 +1,35 @@
-<mat-card>
-  <img class=card-image src="{{player.picture}}">
+<div class="container col-lg-5 offset-lg-1 col-md-6 offset-md-1 col-12">
 
-  <div class="data">
-    <mat-card-title>{{player.firstname}} {{player.lastname}}</mat-card-title>
+  <mat-card routerLink="playerdetails"
+            (click)="onViewPlayerDetails()"
+            class="container player-card">
 
-    <div class="mat-card-subTitle">
-      <mat-list-item >RANK</mat-list-item>
-      <mat-list-item >POINTS</mat-list-item>
-      <mat-list-item >COUNTRY</mat-list-item>
+    <img class="card-image" src="{{player.picture}}">
+    <div class="row">
+      <mat-card-title class="player-title offset-4 col-7">{{player.firstname}} {{player.lastname}}</mat-card-title>
     </div>
-    <div class="value">
-      <mat-list-item>#{{player.data.rank}}</mat-list-item>
-      <mat-list-item>{{player.data.points}}</mat-list-item>
-      <mat-list-item>{{player.country.code}}</mat-list-item>
+    <div class="row">
+      <div class="col-2 offset-4">
+        <mat-list-item class="player-item">RANK</mat-list-item>
+      </div>
+      <div class="col-2">
+        <mat-list-item class="player-item">POINTS</mat-list-item>
+      </div>
+      <div class="col-2">
+        <mat-list-item class="player-item">COUNTRY</mat-list-item>
+      </div>
     </div>
-  </div>
-
-</mat-card>
-
+    <div class="row">
+      <div class="col-2 offset-4">
+        <mat-list-item class="value">#{{player.data.rank}}</mat-list-item>
+      </div>
+      <div class="col-2">
+        <mat-list-item class="value">{{player.data.points}}</mat-list-item>
+      </div>
+      <div class="col-2">
+        <mat-list-item class="value">{{player.country.name}}</mat-list-item>
+      </div>
+    </div>
+  </mat-card>
+</div>
 

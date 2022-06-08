@@ -7,7 +7,8 @@
       "sex": "M",
       "country": {
         "picture": "https://data.latelier.co/training/tennis_stats/resources/Serbie.png",
-        "code": "SRB"
+        "code": "SRB",
+        "name": "Serbie"
       },
       "picture": "https://data.latelier.co/training/tennis_stats/resources/Djokovic.png",
       "data": {
@@ -84,7 +85,8 @@
       "sex": "F",
       "country": {
         "picture": "https://data.latelier.co/training/tennis_stats/resources/USA.png",
-        "code": "USA"
+        "code": "USA",
+        "name": "USA"
       },
       "picture": "https://data.latelier.co/training/tennis_stats/resources/Venus.webp",
       "data": {
@@ -151,7 +153,8 @@
       "sex": "M",
       "country": {
         "picture": "https://data.latelier.co/training/tennis_stats/resources/Suisse.png",
-        "code": "SUI"
+        "code": "SUI",
+        "name": "Suisse"
       },
       "picture": "https://data.latelier.co/training/tennis_stats/resources/Wawrinka.png",
       "data": {
@@ -222,7 +225,8 @@
       "sex": "F",
       "country": {
         "picture": "https://data.latelier.co/training/tennis_stats/resources/USA.png",
-        "code": "USA"
+        "code": "USA",
+        "name": "USA"
       },
       "picture": "https://data.latelier.co/training/tennis_stats/resources/Serena.png",
       "data": {
@@ -287,7 +291,8 @@
       "sex": "M",
       "country": {
         "picture": "https://data.latelier.co/training/tennis_stats/resources/Espagne.png",
-        "code": "ESP"
+        "code": "ESP",
+        "name": "Espagne"
       },
       "picture": "https://data.latelier.co/training/tennis_stats/resources/Nadal.png",
       "data": {

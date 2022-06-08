@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Player} from "../models/Player";
 import {PlayerService} from "../service/player.service";
-import {ActivatedRoute} from "@angular/router";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-player',
@@ -13,8 +13,11 @@ export class PlayerComponent {
   @Input() player!: Player;
 
   constructor(private playerService: PlayerService,
-              private route: ActivatedRoute) {
+              private router: Router) {
   }
 
 
+  onViewPlayerDetails() {
+    this.router.navigateByUrl(`playerdetails/${this.player.id}`).then();
+  }
 }

@@ -1,1 +1,78 @@
-<p>player-detail works!</p>
+<div class="background container-fluid">
+  <br/>
+  <br/>
+  <div class="container col-10 offset-1">
+    <mat-card class="detail-card"
+              routerLink="playerdetails" (click)="onViewList()"
+              *ngIf="player$ | async as player">
+
+      <div class="row">
+        <img class="player-image col-2" src="{{player.picture}}">
+        <mat-card-title class="col-7 offset-2 detail-title firstname">{{player.firstname}}</mat-card-title>
+        <img class="country-flag col-3" alt="FLAG PICTURE" src="{{player.country.picture}}">
+      </div>
+
+      <div class="row">
+        <mat-card-title class="col-6 offset-2 detail-title lastname">{{player.lastname}}</mat-card-title>
+        <div class="container col-4">
+          <div class="row">
+            <mat-card-subtitle class="country-code col-2 offset-5">{{player.country.code.charAt(0)}}</mat-card-subtitle>
+            <mat-card-subtitle class="country-code col-2">{{player.country.code.charAt(1)}}</mat-card-subtitle>
+            <mat-card-subtitle class="country-code col-2">{{player.country.code.charAt(2)}}</mat-card-subtitle>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container col-6 offset-2">
+          <div class="row">
+            <mat-list-item class="detail-item col-3 offset-3">RANK</mat-list-item>
+            <mat-list-item class="detail-item col-3">POINTS</mat-list-item>
+            <mat-list-item class="detail-item col-3">COUNTRY</mat-list-item>
+          </div>
+          <div class="row">
+            <mat-list-item class="detail-value col-3 offset-3">{{player.data.rank}}</mat-list-item>
+            <mat-list-item class="detail-value col-3">{{player.data.points}}</mat-list-item>
+            <mat-list-item class="detail-value col-3">{{player.country.name}}</mat-list-item>
+          </div>
+          <br/>
+          <br/>
+          <div class="row">
+            <mat-list-item class="detail-item col-3 offset-3">BIRTHDAY</mat-list-item>
+            <mat-list-item class="detail-item col-3">AGE</mat-list-item>
+          </div>
+          <div class="row">
+            <mat-list-item class="detail-value col-3 offset-3">{{player.data.birthday}}</mat-list-item>
+            <mat-list-item class="detail-value col-3">{{player.data.age}}</mat-list-item>
+          </div>
+          <br/>
+          <br/>
+          <div class="row">
+            <mat-list-item class="detail-item col-3 offset-3">WEIGHT</mat-list-item>
+            <mat-list-item class="detail-item col-3">HEIGHT</mat-list-item>
+            <mat-list-item class="detail-item col-3">BMI</mat-list-item>
+          </div>
+          <div class="row">
+            <mat-list-item class="detail-value col-3 offset-3">{{player.data.weight}}</mat-list-item>
+            <mat-list-item class="detail-value col-3">{{player.data.height}}</mat-list-item>
+            <mat-list-item class="detail-value col-3">{{player.data.bmi}}</mat-list-item>
+          </div>
+        </div>
+
+        <div class="container col-4">
+          <div class="row">
+            <mat-list-item class="detail-item col-5">CARREER TITLES</mat-list-item>
+            <mat-list-item class="row carreer-title col-12" *ngFor="let title of player.data.titles">
+              {{title.year}} - {{title.victories}}
+              <mat-list-item class="row title-value col-12">{{title.tournaments}}</mat-list-item>
+            </mat-list-item>
+
+          </div>
+        </div>
+
+      </div>
+    </mat-card>
+
+  </div>
+</div>
+
+

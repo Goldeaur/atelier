@@ -1,0 +1,82 @@
+.background {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: url(./../../assets/Background.jpg) no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+}
+
+.detail-card {
+  margin-top: 15px;
+  height: 97vh;
+
+}
+.country-flag{
+  witdh: 200px;
+  height: 150px;
+  object-fit: fill;
+  object-position: top;
+  padding: 0;
+
+
+}
+.player-image {
+  width: 32vw;
+  height: auto;
+  margin-left: -18vh;
+  position: absolute;
+}
+
+.detail-title {
+  color: #F2753B;
+  font-family: Montserrat;
+}
+
+.carreer-title {
+  color: #F2753B;
+  font-family: Montserrat;
+}
+
+.firstname {
+  font-size: 100px;
+  font-weight: bold;
+  color: white;
+  text-shadow: -2px -2px 0 #F2753B, 2px -2px 0 #F2753B, -2px 2px 0 #F2753B, 2px 2px 0 #F2753B;
+}
+
+.lastname {
+  font-size: 140px;
+  margin-top: -75px;
+}
+
+.title-value{
+  font-size: small;
+}
+
+.detail-item{
+  color: black;
+  opacity: 30%;
+  font-family: Mulish;
+}
+
+.detail-value{
+  color: #F2753B;
+  font-family: Montserrat;
+  font-size: small;
+  opacity: 100;
+}
+
+.country-code{
+  color: black;
+  font-size: 40px;
+  opacity: 30%;
+  font-family: Mulish;
+}
+
+
+
+
+
+
+
