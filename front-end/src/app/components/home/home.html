@@ -1,12 +1,11 @@
 <div class="background container-fluid">
   <div class="row">
-    <div class="container col-6">
+    <div class="container col-lg-6 col-12">
       <app-player *ngFor="let player of players$ | async" [player]="player">
       </app-player>
     </div>
-    <div class="container col-6">
-      <app-player *ngFor="let player of players$ | async" [player]="player">
-      </app-player>
+    <div class="container col-lg-6 col-12">
+      <app-statistics></app-statistics>
     </div>
   </div>
 </div>

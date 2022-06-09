@@ -1,0 +1,34 @@
+<div class="container position-relative" *ngIf="statistics$ | async as stats">
+
+
+  <mat-card routerLink="playerdetails"
+            class="container position-relative stat-card col-lg-6 col-12">
+
+    <div class="row">
+      <mat-card-title class="stat-title text-center col-lg-12">Statistics</mat-card-title>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <mat-list-item class="stat-item text-center">BMI AVERAGE</mat-list-item>
+      </div>
+      <div class="col-4">
+        <mat-list-item class="stat-item text-center">MOST WON RATIO</mat-list-item>
+      </div>
+      <div class="col-4">
+        <mat-list-item class="stat-item text-center">MEDIAN HEIGHT</mat-list-item>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <mat-list-item class="stat-value">{{stats.averageBmi}}</mat-list-item>
+      </div>
+      <div class="col-4">
+        <mat-list-item class="stat-value">{{stats.country}}</mat-list-item>
+      </div>
+      <div class="col-4">
+        <mat-list-item class="stat-value">{{stats.medianHeight}}</mat-list-item>
+      </div>
+    </div>
+  </mat-card>
+</div>
+

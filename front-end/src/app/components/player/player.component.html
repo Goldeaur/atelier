@@ -1,32 +1,32 @@
-<div class="container">
+<div class="container position-relative">
 
   <mat-card routerLink="playerdetails"
             (click)="onViewPlayerDetails()"
-            class="container player-card">
+            class="container position-relative player-card col-lg-6 col-12">
 
-    <img class="card-image" src="{{player.picture}}">
+    <img class="card-image d-none d-sm-block" src="{{player.picture}}">
     <div class="row">
-      <mat-card-title class="player-title offset-4 col-7">{{player.firstname}} {{player.lastname}}</mat-card-title>
+      <mat-card-title class="col-8 player-title offset-sm-4 offset-1">{{player.firstname}} {{player.lastname}}</mat-card-title>
     </div>
     <div class="row">
-      <div class="col-2 offset-4">
+        <div class="col-2 offset-sm-4 offset-2">
         <mat-list-item class="player-item">RANK</mat-list-item>
       </div>
-      <div class="col-2">
+      <div class="col-3">
         <mat-list-item class="player-item">POINTS</mat-list-item>
       </div>
-      <div class="col-2">
+      <div class="col-3">
         <mat-list-item class="player-item">COUNTRY</mat-list-item>
       </div>
     </div>
     <div class="row">
-      <div class="col-2 offset-4">
+      <div class="col-2 offset-sm-4 offset-2">
         <mat-list-item class="value">#{{player.data.rank}}</mat-list-item>
       </div>
-      <div class="col-2">
+      <div class="col-3">
         <mat-list-item class="value">{{player.data.points}}</mat-list-item>
       </div>
-      <div class="col-2">
+      <div class="col-3">
         <mat-list-item class="value">{{player.country.name}}</mat-list-item>
       </div>
     </div>

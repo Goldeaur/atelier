@@ -12,12 +12,8 @@ export class PlayerService {
   constructor(private http: HttpClient) {
   }
 
-  headers: HttpHeaders = new HttpHeaders()
-    .set('content-type', 'application/json')
-    .set('Access-Control-Allow-Origin', '*');
-
   getAllPLayers(): Observable<Player[]> {
-    return this.http.get<Player[]>('http://localhost:8081/player', {'headers': this.headers});
+    return this.http.get<Player[]>('http://localhost:8081/player');
   }
 
   getPLayerById(id: number): Observable<Player> {

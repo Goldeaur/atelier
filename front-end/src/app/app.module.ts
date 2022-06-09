@@ -4,7 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {PlayerComponent} from "./components/player/player.component";
-import {PlayerListComponent} from "./components/player-list/player-list.component";
+import {Home} from "./components/home/home";
 import {PlayerDetailComponent} from "./components/player-detail/player-detail.component";
 import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,7 +18,7 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
   declarations: [
     AppComponent,
     PlayerComponent,
-    PlayerListComponent,
+    Home,
     PlayerDetailComponent,
     StatisticsComponent
   ],
