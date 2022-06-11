@@ -5,6 +5,7 @@
   background: url(../../../assets/Background.jpg) no-repeat center fixed;
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   background-size: cover; /* version standardisée */
+  min-height: 100%;
 }
 
 
