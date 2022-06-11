@@ -11,9 +11,8 @@
 
 .detail-card {
   margin-top: 3%;
-  min-height: 100%;
   height: auto;
-  width: 85vw;
+  width: 100%;
   // TODO why not working this way ?
   //overflow-Y : hidden;
   //overflow-x: visible;
@@ -53,7 +52,7 @@
 
 .lastname {
   font-size: clamp(30px, 8vw, 1000px);
-  margin-top: -75px;
+  margin-top: -5vh;
 }
 
 .title-value{
