@@ -10,6 +10,7 @@
     </parent>
     <groupId>com.atelier.tennis</groupId>
     <artifactId>atelier_tennis</artifactId>
+    <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>atelier_tennis</name>
     <description>Tennis Demo technical test for interview</description>
@@ -50,16 +51,28 @@
         </dependency>
 
     </dependencies>
-
-
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
     </build>
     <repositories>
         <repository>
