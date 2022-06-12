@@ -20,3 +20,10 @@ Json file resources are located in src/main/resources/data.
 headtohead.json is original file and not used anymore for the project.
 
 completed.json is used instead and contains additional values. 
+
+# frontEnd
+
+Front-end was initially inside this repository but has been separated for deployment facilities on Heroku.
+Folder is kept for history reason and as a reminder to improve deployment.
+
+Please ignore this folder and visit https://github.com/Goldeaur/atelier-front to get deployed frontend.
